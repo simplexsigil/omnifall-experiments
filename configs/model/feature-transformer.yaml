@@ -1,0 +1,11 @@
+type: feature_transformer
+model_type: "FeatureTransformer"
+name_or_path: "feature_transformer"
+out_features: 10  # Number of action classes
+hidden_dim: 768   # Hidden dimension for transformer
+num_layers: 2     # Number of transformer encoder layers
+num_heads: 8      # Number of attention heads
+dropout: 0.3      # Dropout rate
+mlp_ratio: 4.0    # MLP hidden dim ratio
+num_features: null     # This is set in the dataset config
+feature_dim: ${dataset.feature_dim}  # Dimension of input features

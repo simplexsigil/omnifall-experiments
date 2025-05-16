@@ -1,0 +1,4 @@
+all: "fourier_phase_only" # "fourier_phase_only" | null
+train: ${dataset.augmentation.all}
+val: ${dataset.augmentation.all}
+test: ${dataset.augmentation.all}

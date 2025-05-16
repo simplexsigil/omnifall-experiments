@@ -1,0 +1,13 @@
+defaults:
+  - visualization: i3d
+  - hardware: default
+  - _self_
+
+# model:  # Used for manually loading a testing checkpoint
+#   name_or_path: "outputs/2024-11-21/14-33-41/MCG-NJU/videomae-small-finetuned-kinetics-finetuned-NTU-RGB+D60/checkpoint-156"
+
+extract_root: /tmp/omnifall-vis/feat-avg
+
+hydra:
+  job: 
+    chdir:  True

@@ -1,0 +1,18 @@
+defaults:
+  - /dataset/omnifall/dinov2@dataset: feature-dataset-labonly  # Default dataset if no specific datasets are provided
+  - /dataset/omnifall/dinov2@dataset_val: feature-dataset-all
+  - /dataset/omnifall/dinov2@dataset_test: feature-dataset-all
+  - _self_
+
+dataset:
+  num_features: 18
+  
+dataset_test:
+  num_features: 18
+
+model:
+  num_layers: 2
+
+wandb:
+  project: "Omnifall Feature Transformer"
+  name: "Lab Only -> All | Dinov2 ${dataset.num_features} features | ${model.num_layers} Layers"

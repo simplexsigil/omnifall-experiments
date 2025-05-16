@@ -1,0 +1,25 @@
+defaults: 
+  - optimizer/adamw
+  - scheduler/cosinelr
+  - _self_
+
+resume_from_checkpoint: null
+
+# Domain-weighted sampling settings
+use_domain_weighted_sampler: true  # Set to true to enable domain balancing
+domain_sampler_max_cap: 20.0  # Maximum oversampling factor
+
+# Class-balanced loss settings
+use_class_balanced_loss: true  # Set to true to enable class-balanced loss
+class_balanced_loss_beta: 0.999  # Beta parameter for effective number of samples (0.9-0.999)
+
+num_epochs: 150
+eval_stride: 1000
+save_stride: ${training.eval_stride}
+batch_size: 256
+optimizer:
+  # General settings
+  BASE_LR: 0.0005
+  WEIGHT_DECAY: 0.01
+  UNFREEZE_PAT: ".*"
+  max_grad_norm: 1.0

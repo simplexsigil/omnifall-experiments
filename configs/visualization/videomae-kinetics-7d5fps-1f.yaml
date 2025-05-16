@@ -1,0 +1,3 @@
+defaults:
+  - /dataset/omnifall/videomae-kinetics-7d5fps-1f@dataset: feature-dataset-all
+output_dir: ${extract_root}/videomae-kinetics-7d5fps-1f

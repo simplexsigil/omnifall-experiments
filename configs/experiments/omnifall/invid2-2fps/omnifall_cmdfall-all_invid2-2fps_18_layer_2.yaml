@@ -1,0 +1,21 @@
+defaults:
+  - /dataset/omnifall/invid2-2fps@dataset: feature-dataset-labonly  # Default dataset if no specific datasets are provided
+  - /dataset/omnifall/invid2-2fps@dataset_test: feature-dataset-all
+  - _self_
+
+dataset:
+  num_features: 18
+
+dataset_test:
+  num_features: 18
+
+model:
+  num_layers: 2
+
+training:
+  num_epochs: 500
+  eval_stride: 2000
+
+wandb:
+  project: "Omnifall Feature Transformer"
+  name: "Lab Only -> All | invid2-2fps ${dataset.num_features} features | ${model.num_layers} Layers"

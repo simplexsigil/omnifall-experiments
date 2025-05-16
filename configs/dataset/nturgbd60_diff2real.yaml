@@ -1,0 +1,14 @@
+defaults: 
+  - nturgbd60/annotations@annotations: action
+  - _self_
+
+name: "NTU-RGB+D60"
+dataset_fps: [30]
+model_fps: ${model.model_fps}
+num_frames: ${model.num_frames}
+video_root_train: "${oc.env:NTU}/diffused"
+video_root_val: "${oc.env:NTU}/diffused"
+video_root_test: "${oc.env:NTU}/rgb_60"
+path_format_train: "{video_root}/{filename}.mp4"
+path_format_val: "{video_root}/{filename}.mp4"
+path_format_test: "{video_root}/{filename}.avi"

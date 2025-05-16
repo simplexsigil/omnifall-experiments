@@ -1,0 +1,8 @@
+ann_type: "single-label-class"
+ann_name: "action"
+annf_train: "${oc.env:TSH}/splits/action/train.csv"
+annf_val: "${oc.env:TSH}/splits/action/val.csv"
+annf_test: "${oc.env:TSH}/splits/action/test.csv"
+attributes: "action"
+num_classes: 31
+encoding_file: "${oc.env:TSH}/splits/action/tsh_action_label2id.yaml"

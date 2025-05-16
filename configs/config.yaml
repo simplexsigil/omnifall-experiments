@@ -1,0 +1,29 @@
+defaults:
+  - dataset: hmdb51
+  - model: videomae-base
+  - training: default
+  - evaluation: default
+  - hardware: default
+  - _self_
+
+wandb:
+  project: "Finetuned VideoMAE Fourier"
+
+do_train: True
+do_test: True
+
+use_fourier: True
+features:
+  output_replacement: 
+    - "/video/"
+    - "/features/vmae-phase/"
+
+training:
+  resume_from_checkpoint: null
+
+# model:  # Used for manually loading a testing checkpoint
+#   name_or_path: "outputs/2024-11-21/14-33-41/MCG-NJU/videomae-small-finetuned-kinetics-finetuned-NTU-RGB+D60/checkpoint-156"
+
+hydra:
+  job: 
+    chdir:  True

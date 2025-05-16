@@ -1,0 +1,9 @@
+all: 
+  - fourier_phase_only # "fourier_phase_only" | null
+  - tube_masking:
+      input_size: [8, 14, 14] # [T, H, W]
+      mask_ratio: 0.9 # interval [0, 1]
+
+train: ${dataset.augmentation.all}
+val: ${dataset.augmentation.all}
+test: ${dataset.augmentation.all}

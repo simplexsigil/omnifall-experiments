@@ -1,0 +1,88 @@
+name: "feature-dataset-labonly"
+feature_datasets:
+  - name: "cmdfall"
+    feature_root: "${oc.env:OMNIFALL_ROOT}/cmdfall/features/videomae-kinetics-7d5fps-1f"
+    annotations_file: "${oc.env:OMNIFALL_ROOT}/labels/dataset/cmdfall.csv"
+    feature_fps: 7.5
+    frames_per_feature: 16
+    feature_stride: 0.133333333
+    feature_centered: false
+    feature_type: "videomae-kinetics-7d5fps-1f"
+    split_root: "${oc.env:OMNIFALL_ROOT}/splits"
+
+  - name: "up_fall"
+    feature_root: "${oc.env:OMNIFALL_ROOT}/up_fall/features/videomae-kinetics-7d5fps-1f"
+    annotations_file: "${oc.env:OMNIFALL_ROOT}/labels/dataset/up_fall.csv"
+    feature_fps: 7.5
+    frames_per_feature: 16
+    feature_stride: 0.133333333
+    feature_centered: false
+    feature_type: "videomae-kinetics-7d5fps-1f"
+    split_root: "${oc.env:OMNIFALL_ROOT}/splits"
+
+  - name: "le2i"
+    feature_root: "${oc.env:OMNIFALL_ROOT}/le2i/features/videomae-kinetics-7d5fps-1f"
+    annotations_file: "${oc.env:OMNIFALL_ROOT}/labels/dataset/le2i.csv"
+    feature_fps: 7.5
+    frames_per_feature: 16
+    feature_stride: 0.133333333
+    feature_centered: false
+    feature_type: "videomae-kinetics-7d5fps-1f"
+    split_root: "${oc.env:OMNIFALL_ROOT}/splits"
+
+  - name: "gmdcsa24"
+    feature_root: "${oc.env:OMNIFALL_ROOT}/GMDCSA24/features/videomae-kinetics-7d5fps-1f"
+    annotations_file: "${oc.env:OMNIFALL_ROOT}/labels/dataset/GMDCSA24.csv"
+    feature_fps: 7.5
+    frames_per_feature: 16
+    feature_stride: 0.133333333
+    feature_centered: false
+    feature_type: "videomae-kinetics-7d5fps-1f"
+    split_root: "${oc.env:OMNIFALL_ROOT}/splits"
+
+  - name: "edf"
+    feature_root: "${oc.env:OMNIFALL_ROOT}/edf/features/videomae-kinetics-7d5fps-1f"
+    annotations_file: "${oc.env:OMNIFALL_ROOT}/labels/dataset/edf.csv"
+    feature_fps: 7.5
+    frames_per_feature: 16
+    feature_stride: 0.133333333
+    feature_centered: false
+    feature_type: "videomae-kinetics-7d5fps-1f"
+    split_root: "${oc.env:OMNIFALL_ROOT}/splits"
+
+  - name: "occu"
+    feature_root: "${oc.env:OMNIFALL_ROOT}/occu/features/videomae-kinetics-7d5fps-1f"
+    annotations_file: "${oc.env:OMNIFALL_ROOT}/labels/dataset/occu.csv"
+    feature_fps: 7.5
+    frames_per_feature: 16
+    feature_stride: 0.133333333
+    feature_centered: false
+    feature_type: "videomae-kinetics-7d5fps-1f"
+    split_root: "${oc.env:OMNIFALL_ROOT}/splits"
+
+  - name: "caucafall"
+    feature_root: "${oc.env:OMNIFALL_ROOT}/caucafall/features/videomae-kinetics-7d5fps-1f"
+    annotations_file: "${oc.env:OMNIFALL_ROOT}/labels/dataset/caucafall.csv"
+    feature_fps: 7.5
+    frames_per_feature: 16
+    feature_stride: 0.133333333
+    feature_centered: false
+    feature_type: "videomae-kinetics-7d5fps-1f"
+    split_root: "${oc.env:OMNIFALL_ROOT}/splits"
+
+  - name: "mcfd"
+    feature_root: "${oc.env:OMNIFALL_ROOT}/mcfd/features/videomae-kinetics-7d5fps-1f"
+    annotations_file: "${oc.env:OMNIFALL_ROOT}/labels/dataset/mcfd.csv"
+    feature_fps: 7.5
+    frames_per_feature: 16
+    feature_stride: 0.133333333
+    feature_centered: false
+    feature_type: "videomae-kinetics-7d5fps-1f"
+    split_root: "${oc.env:OMNIFALL_ROOT}/splits"
+
+num_features: 9  # Number of consecutive features to use
+tokens_per_feature: 1
+feature_dim: 768  # Dimension of input features
+
+feature_ext: ".h5"
+num_classes: 10

@@ -1,0 +1,7 @@
+ann_type: "multi-label-class"
+ann_name: "stprivacy"
+annf_train: "annotations/ucf101_privacy_attribute_label_train.csv"
+annf_val: "annotations/ucf101_privacy_attribute_label_val.csv"
+annf_test: "annotations/ucf101_privacy_attribute_label_test.csv"
+attributes: ["face", "skin color", "gender", "nudity", "familiar relationship"]
+num_classes: [2, 2, 2, 2, 2]

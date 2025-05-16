@@ -1,0 +1,88 @@
+name: "feature-dataset-labonly"
+feature_datasets:
+  - name: "cmdfall"
+    feature_root: "${oc.env:OMNIFALL_ROOT}/cmdfall/features/dinov2"
+    annotations_file: "${oc.env:OMNIFALL_ROOT}/labels/dataset/cmdfall.csv"
+    feature_fps: 20.0
+    frames_per_feature: 16
+    feature_stride: 0.05
+    feature_centered: true
+    feature_type: "dinov2"
+    split_root: "${oc.env:OMNIFALL_ROOT}/splits"
+  
+  - name: "up_fall"
+    feature_root: "${oc.env:OMNIFALL_ROOT}/up_fall/features/dinov2"
+    annotations_file: "${oc.env:OMNIFALL_ROOT}/labels/dataset/up_fall.csv"
+    feature_fps: 18.0
+    frames_per_feature: 16
+    feature_stride: 0.055555556
+    feature_centered: true
+    feature_type: "dinov2"
+    split_root: "${oc.env:OMNIFALL_ROOT}/splits"
+
+  - name: "le2i"
+    feature_root: "${oc.env:OMNIFALL_ROOT}/le2i/features/dinov2"
+    annotations_file: "${oc.env:OMNIFALL_ROOT}/labels/dataset/le2i.csv"
+    feature_fps: 25.0
+    frames_per_feature: 16
+    feature_stride: 0.04
+    feature_centered: true
+    feature_type: "dinov2"
+    split_root: "${oc.env:OMNIFALL_ROOT}/splits"
+
+  - name: "gmdcsa24"
+    feature_root: "${oc.env:OMNIFALL_ROOT}/GMDCSA24/features/dinov2"
+    annotations_file: "${oc.env:OMNIFALL_ROOT}/labels/dataset/GMDCSA24.csv"
+    feature_fps: 30.0
+    frames_per_feature: 16
+    feature_stride: 0.033333333
+    feature_centered: true
+    feature_type: "dinov2"
+    split_root: "${oc.env:OMNIFALL_ROOT}/splits"
+
+  - name: "edf"
+    feature_root: "${oc.env:OMNIFALL_ROOT}/edf/features/dinov2"
+    annotations_file: "${oc.env:OMNIFALL_ROOT}/labels/dataset/edf.csv"
+    feature_fps: 30.0
+    frames_per_feature: 16
+    feature_stride: 0.033333333
+    feature_centered: true
+    feature_type: "dinov2"
+    split_root: "${oc.env:OMNIFALL_ROOT}/splits"
+
+  - name: "occu"
+    feature_root: "${oc.env:OMNIFALL_ROOT}/occu/features/dinov2"
+    annotations_file: "${oc.env:OMNIFALL_ROOT}/labels/dataset/occu.csv"
+    feature_fps: 30.0
+    frames_per_feature: 16
+    feature_stride: 0.033333333
+    feature_centered: true
+    feature_type: "dinov2"
+    split_root: "${oc.env:OMNIFALL_ROOT}/splits"
+
+  - name: "caucafall"
+    feature_root: "${oc.env:OMNIFALL_ROOT}/caucafall/features/dinov2"
+    annotations_file: "${oc.env:OMNIFALL_ROOT}/labels/dataset/caucafall.csv"
+    feature_fps: 20.0
+    frames_per_feature: 16
+    feature_stride: 0.05
+    feature_centered: true
+    feature_type: "dinov2"
+    split_root: "${oc.env:OMNIFALL_ROOT}/splits"
+
+  - name: "mcfd"
+    feature_root: "${oc.env:OMNIFALL_ROOT}/mcfd/features/dinov2"
+    annotations_file: "${oc.env:OMNIFALL_ROOT}/labels/dataset/mcfd.csv"
+    feature_fps: 30.0
+    frames_per_feature: 16
+    feature_stride: 0.033333333
+    feature_centered: true
+    feature_type: "dinov2"
+    split_root: "${oc.env:OMNIFALL_ROOT}/splits"
+
+num_features: 9  # Number of consecutive features to use
+tokens_per_feature: 256
+feature_dim: 768  # Dimension of input features
+
+feature_ext: ".h5"
+num_classes: 10

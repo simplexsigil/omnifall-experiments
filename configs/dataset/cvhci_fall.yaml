@@ -1,0 +1,22 @@
+defaults: 
+  - cvhci_fall/annotations@annotations: action
+  - augmentation: fourier-phase
+  - _self_
+
+name: "CVHCI Fall"
+dataset_fps: [30]
+model_fps: ${model.model_fps}
+num_frames: ${model.num_frames}
+dataset_type: "cvhci"
+
+root: "${oc.env:FALL_ROOT,/lsdf/data/activity/fall_detection}"
+videos: "" # video directory, @cvhci: "videos" | "phase_only" 
+video_root_train: "${dataset.root}"
+video_root_val: "${dataset.root}"
+video_root_test: "${dataset.root}"
+video_root_full: "${dataset.root}"
+path_format_train: "{video_root}/{filename}"
+path_format_val: "{video_root}/{filename}"
+path_format_test: "{video_root}/{filename}"
+path_format_full: "{video_root}/{filename}"
+fourier_root: "${dataset.root}/phase_only"

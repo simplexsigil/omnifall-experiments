@@ -1,0 +1,3 @@
+defaults:
+  - /dataset/omnifall/invid2-2fps@dataset: feature-dataset-all
+output_dir: ${extract_root}/invid2-2fps

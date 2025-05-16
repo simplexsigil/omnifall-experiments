@@ -1,0 +1,4 @@
+metric: "Top-1 Accuracy"
+clips_per_video: 5
+crops_per_clip: 3
+batch_size: 128

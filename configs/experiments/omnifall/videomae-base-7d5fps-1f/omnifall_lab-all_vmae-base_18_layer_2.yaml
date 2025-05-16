@@ -1,0 +1,18 @@
+defaults:
+  - /dataset/omnifall/videomae-kinetics-7d5fps-1f@dataset: feature-dataset-labonly  # Default dataset if no specific datasets are provided
+  - /dataset/omnifall/videomae-kinetics-7d5fps-1f@dataset_val: feature-dataset-all
+  - /dataset/omnifall/videomae-kinetics-7d5fps-1f@dataset_test: feature-dataset-all
+  - _self_
+
+dataset:
+  num_features: 18
+  
+dataset_test:
+  num_features: 18
+
+model:
+  num_layers: 2
+
+wandb:
+  project: "Omnifall Feature Transformer"
+  name: "Lab Only -> All | VMAE Base ${dataset.num_features} features | ${model.num_layers} Layers"

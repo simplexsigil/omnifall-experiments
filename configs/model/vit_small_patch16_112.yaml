@@ -1,0 +1,20 @@
+type: timm
+model_type: "VisionTransformer"
+name_or_path: "vit_small_patch16_112"
+default_cfg:
+  crop_pct: 0.9
+  interpolation: "bicubic"
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+  first_conv: "patch_embed.proj"
+  classifier: "head"
+
+args:
+  num_classes: ${dataset.num_classes}
+  img_size: 112
+  embed_dim: 384
+  depth: 12
+  num_heads: 12
+  mlp_ratio: 4
+  qkv_bias: true
+  all_frames: 16

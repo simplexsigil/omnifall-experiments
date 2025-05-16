@@ -1,0 +1,8 @@
+ann_type: "single-label-class"
+ann_name: "action"
+annf_train: "${dataset.root}/annotated_splits/trainlist0${dataset.annotations.split}.csv"
+annf_val: "${dataset.root}/annotated_splits/testlist0${dataset.annotations.split}.csv"
+annf_test: "${dataset.root}/annotated_splits/testlist0${dataset.annotations.split}.csv"
+attributes: "action"
+num_classes: 101
+split: 1

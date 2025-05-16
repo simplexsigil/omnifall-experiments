@@ -1,0 +1,20 @@
+defaults:
+  - model: feature-transformer
+  - training: feature_transformer
+  - evaluation: default
+  - hardware: default
+  - _self_
+
+wandb:
+  project: "Omnifall Feature Transformer"
+
+do_train: True
+do_test: True
+
+hardware:
+  num_data_workers: 4
+
+# Environment variables
+hydra:
+  job: 
+    chdir: True

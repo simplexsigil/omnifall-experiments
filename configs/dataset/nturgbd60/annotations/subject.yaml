@@ -1,0 +1,8 @@
+ann_type: "single-label-class"
+ann_name: "subject"
+annf_train: "${oc.env:NTU}/splits/subject_ident/subject/train.csv"
+annf_val: "${oc.env:NTU}/splits/subject_ident/subject/val.csv"
+annf_test: "${oc.env:NTU}/splits/subject_ident/subject/test.csv"
+attributes: "subject"
+num_classes: 40
+encoding_file: null

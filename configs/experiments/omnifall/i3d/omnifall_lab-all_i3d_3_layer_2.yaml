@@ -1,0 +1,17 @@
+defaults:
+  - /dataset/omnifall/i3d@dataset: feature-dataset-labonly  # Default dataset if no specific datasets are provided
+  - /dataset/omnifall/i3d@dataset_test: feature-dataset-all
+  - _self_
+
+dataset:
+  num_features: 3
+  
+dataset_test:
+  num_features: 3
+
+model:
+  num_layers: 2
+
+wandb:
+  project: "Omnifall Feature Transformer"
+  name: "Lab Only -> All | I3D ${dataset.num_features} features | ${model.num_layers} Layers"

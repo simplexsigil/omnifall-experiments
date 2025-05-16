@@ -1,0 +1,14 @@
+defaults: 
+  - toyota_smarthome/annotations@annotations: action
+  - _self_
+
+name: "TSH"
+dataset_fps: [20]
+model_fps: ${model.model_fps}
+num_frames: ${model.num_frames}
+video_root_train: "${oc.env:TSH}/mp4"
+video_root_val: "${oc.env:TSH}/mp4"
+video_root_test: "${oc.env:TSH}/mp4"
+path_format_train: "{video_root}/{filename}.mp4"
+path_format_val: "{video_root}/{filename}.mp4"
+path_format_test: "{video_root}/{filename}.mp4"

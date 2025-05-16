@@ -1,0 +1,16 @@
+defaults: 
+  - optimizer/adamw
+  - scheduler/cosinelr
+  - _self_
+
+resume_from_checkpoint: null
+
+num_epochs: 30
+eval_stride: 3
+save_stride: ${training.eval_stride}
+batch_size: 32
+optimizer:
+  # General settings
+  BASE_LR: 0.0005
+  WEIGHT_DECAY: 0.01
+  UNFREEZE_PAT: ".*"

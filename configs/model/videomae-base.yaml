@@ -1,0 +1,11 @@
+type: transformers
+model_type: "VideoMAEForVideoClassification"
+name_or_path: "MCG-NJU/videomae-base"
+torch_dtype: "float32"
+attn_implementation: "sdpa"
+out_features: 400
+num_frames: 16
+model_fps: 7.5
+sampling_rate: 4
+# The model was trained on kinetics at 30 fps with sampling rate 4 and 16 frames. so it covers 16*4 frames and roughly 2.13 seconds.
+# Other datasets have other framerates and it has to be adapted.

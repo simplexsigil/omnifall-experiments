@@ -1,0 +1,19 @@
+name: "feature-dataset-labonly"
+feature_datasets:
+  - name: "cmdfall"
+    feature_root: "${oc.env:OMNIFALL_ROOT}/cmdfall/features/i3d"
+    annotations_file: "${oc.env:OMNIFALL_ROOT}/labels/dataset/cmdfall.csv"
+    feature_fps: 20.0
+    frames_per_feature: 16
+    feature_stride: 0.05
+    feature_centered: true
+    feature_type: "i3d"
+    split_root: "${oc.env:OMNIFALL_ROOT}/splits"
+
+
+num_features: 9  # Number of consecutive features to use
+tokens_per_feature: 1
+feature_dim: 2048  # Dimension of input features
+
+feature_ext: ".h5"
+num_classes: 10

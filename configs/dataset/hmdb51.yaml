@@ -1,0 +1,19 @@
+defaults: 
+  - hmdb51/annotations@annotations: action
+  - augmentation: fourier-phase
+  - _self_
+
+name: "HMDB51"
+dataset_fps: [30]
+model_fps: ${model.model_fps}
+num_frames: ${model.num_frames}
+
+root: "${oc.env:HMDB_ROOT,/lsdf/data/activity/HMDB51}"
+videos: "videos" # video directory, @cvhci: "videos" | "phase_only" 
+video_root_train: "${dataset.root}/${dataset.videos}"
+video_root_val: "${dataset.root}/${dataset.videos}"
+video_root_test: "${dataset.root}/${dataset.videos}"
+path_format_train: "{video_root}/{filename}"
+path_format_val: "{video_root}/{filename}"
+path_format_test: "{video_root}/{filename}"
+fourier_root: "${dataset.root}/phase_only"

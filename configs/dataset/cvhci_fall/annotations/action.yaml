@@ -1,0 +1,10 @@
+ann_type: "single-label-class"
+ann_name: "action"
+annotations_root: "${dataset.root}/cvhci_fall/labels/splits/{dataset.annotations.split}"
+annf_train: "${dataset.annotations.annotations_root}/train.csv"
+annf_val: "${dataset.annotations.annotations_root}/val.csv"
+annf_test: "${dataset.annotations.annotations_root}/test.csv"
+annf_full: "${dataset.root}/cvhci_fall/labels/full.csv"
+attributes: "action"
+num_classes: 51
+split: any

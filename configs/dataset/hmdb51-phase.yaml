@@ -1,0 +1,28 @@
+defaults: 
+  - hmdb51/annotations@annotations: action
+  - _self_
+
+name: "HMDB51"
+dataset_fps: [30]
+model_fps: ${model.model_fps}
+num_frames: ${model.num_frames}
+
+root: "${oc.env:HMDB_ROOT,/lsdf/data/activity/HMDB51}"
+videos: "phase_only" 
+video_root_train: "${dataset.root}/${dataset.videos}"
+video_root_val: "${dataset.root}/${dataset.videos}"
+video_root_test: "${dataset.root}/${dataset.videos}"
+path_format_train: "{video_root}/{filename}"
+path_format_val: "{video_root}/{filename}"
+path_format_test: "{video_root}/{filename}"
+fourier_root: "${dataset.root}/phase_only"
+
+normalize: 
+  mean: [0.5, 0.5, 0.5]
+  std: [0.01953125, 0.01953125, 0.01953125]
+
+augmentation:
+  all: null # "fourier_phase_only" already applied
+  train: ${dataset.augmentation.all}
+  val: ${dataset.augmentation.all}
+  test: ${dataset.augmentation.all}

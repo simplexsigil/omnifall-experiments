@@ -1,0 +1,3 @@
+gpus: null  # Number of GPUs to use. If null, use all available GPUs.
+num_data_workers: 4  # Number of data loading workers.
+# Other options: [] for CPU, [0] for GPU 0, [0, 1] for GPU 0 and 1.
