@@ -6,7 +6,7 @@ This repository contains the code for running benchmarking experiments on the Om
 
 **There we also provide links to download the features of all datasets which are needed for these experiments.**
 
-We might provide further convencience commits which do not change the experiments or functionality, but further improved documentation and facilitated setup [here](https://github.com/simplexsigil/omnifall-experiments).
+We might provide further convencience commits which do not change the experiments or functionality, but further improved documentation and facilitated setup for review [here](https://github.com/simplexsigil/omnifall-experiments/tree/release).
 
 ## Overview
 
