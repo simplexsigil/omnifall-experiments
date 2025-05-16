@@ -24,18 +24,11 @@ The system uses pre-extracted features from various backbone models and trains a
 
 1. Create a conda environment using the provided environment file:
 ```bash
-conda env create -f environment.yml
-```
-
-2. Activate the environment:
-```bash
-conda activate fall-da
-```
-
-3. Install additional requirements if needed:
-```bash
+conda create -n omnifall python=3.12
+conda activate omnifall
 pip install -r requirements.txt
 ```
+
 
 ### Dataset Setup
 
@@ -117,6 +110,7 @@ Several pre-configured experiments are available in the [experiments config dire
 #### VideoMAE Experiments
 - `omnifall_lab-all_vmae-base_18_layer_2`: VideoMAE Base, 2-layer model with 18 features, cross-subject split.
 - `omnifall_lab-all_vmae-base_18_layer_2_cv`: VideoMAE Base, 2-layer model with 18 features, cross-view split.
+- 
 - `omnifall_lab-all_vmae-kinetics_18_layer_2`: VideoMAE Kinetics, 2-layer model with 18 features, cross-subject split.
 - `omnifall_lab-all_vmae-kinetics_18_layer_2_cv`: VideoMAE Kinetics, 2-layer model with 18 features, cross-view split.
 
